@@ -1,0 +1,15 @@
+extends common/layout
+
+block layout-content
+  .main-content
+    h1.page-title Places to visit in India
+    .places-container
+      each place in places
+        .place-card
+          a(href=`/placeDetails/${place.id}`) 
+            img(src=place.image_url, alt=place.attraction)
+          .card-content
+            a(href=`/placeDetails/${place.id}`)  
+                h2 #{place.attraction}
+            p City: #{place.city}
+            p State: #{place.state}

@@ -1,0 +1,28 @@
+extends common/layout 
+
+block layout-content 
+    .form-container
+        h1 Add New Place
+        form(method="post" action="/admin/place/add/submit")
+            .form-group 
+                label(for="attraction") Attraction: 
+                input(type="string", id="attraction", name="placeAttraction", placeholder="e.g. Borra Caves")
+            .form-group 
+                label(for="state") State: 
+                input(type="string", id="state", name="placeState", placeholder="The state attraction is located.")
+            .form-group 
+                label(for="city") City: 
+                input(type="string", id="city", name="placeCity", placeholder="The city attraction is located.")
+            .form-group 
+                label(for="imgUrl") Image URL: 
+                input(type="string", id="imgUrl", name="placeImgUrl", placeholder="The Image Url of the attraction.")
+            .form-group 
+                label(for="about") About: 
+                textarea(type="text", id="about", name="placeAbout", placeholder="Provide a brief about the attraction.", cols="30", rows="10")
+            .form-group 
+                label(for="food") Food: 
+                textarea(type="text", id="food", name="placeFood", placeholder="Provide a brief about the local food.", cols="30", rows="10")
+            .form-group
+                label(for="history") History: 
+                textarea(type="text", id="history", name="placeHistory", placeholder="Add about the history of the attraction", cols="30", rows="10")
+            button(type="submit") Add Link 

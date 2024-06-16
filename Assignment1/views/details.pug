@@ -1,0 +1,20 @@
+extends common/layout
+
+block layout-content
+  .main-content
+    .place-detail-container
+      .place-image
+        img(src=place.image_url, alt=place.attraction)
+      .place-details
+        h1 #{place.attraction}
+        .location
+          p City: #{place.city}
+          p State: #{place.state}
+        h2 About
+        p #{place.about}
+        h2 Food
+        p #{place.food}
+        h2 History
+        p #{place.history}
+        .buy-ticket
+          a.button(href="#") Buy Ticket
